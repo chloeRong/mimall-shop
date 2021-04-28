@@ -16,7 +16,7 @@ export default {
 		HelloWorld
 	},
 	mounted() {
-		const url = 'https://www.imooc.com/common/adver-getadver'
+		const url = '/api/common/adver-getadver'
 		// axios.get(url).then((res) => {
 		// 	console.log(res)
 		// })
