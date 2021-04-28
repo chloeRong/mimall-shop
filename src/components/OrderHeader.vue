@@ -1,10 +1,10 @@
 <template>
-	<div>product page</div>
+	<div>order header</div>
 </template>
 
 <script>
 export default {
-	name: 'product',
+	name: 'order-header',
 	data() {
 		return {}
 	},
@@ -12,4 +12,4 @@ export default {
 	methods: {}
 }
 </script>
-<style lang="stylus" scoped></style>
+<style lang="scss" scoped></style>

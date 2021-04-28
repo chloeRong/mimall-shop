@@ -1,14 +1,19 @@
 <template>
-	<div>product page</div>
+	<div>
+		nav-header
+	</div>
 </template>
 
 <script>
 export default {
-	name: 'product',
+	name: 'nav-header',
 	data() {
 		return {}
 	},
+	computed: {},
 	components: {},
+	created() {},
+	mounted() {},
 	methods: {}
 }
 </script>

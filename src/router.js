@@ -13,15 +13,17 @@ export default new Router({
       redirect: '/index',
       children: [
         {
-          path: '/index',
+          path: 'index',
           name: 'index',
-          component: Index,
-        }, {
-          path: '/product/:id',
+          component: Index
+        },
+        {
+          path: 'product/:id',
           name: 'product',
           component: () => import('./pages/product.vue')
-        }, {
-          path: '/detail/:id',
+        },
+        {
+          path: 'detail/:id',
           name: 'detail',
           component: () => import('./pages/detail.vue')
         }
