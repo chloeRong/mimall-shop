@@ -8,7 +8,17 @@
 export default {
 	name: 'App',
 	components: {},
-	mounted() {}
+	mounted() {
+		/* 本地json数据请求 */
+		this.axios.get('/mock/user/login.json').then((res) => {
+			console.log(res)
+		})
+
+		/* 集成mockjs插件搭建API */
+		// this.axios.get('/user/login').then((res) => {
+		// 	console.log(res.username)
+		// })
+	}
 }
 </script>
 

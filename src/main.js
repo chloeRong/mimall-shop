@@ -3,11 +3,19 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
 import router from './router'
-import env from './env'
+// import env from './env'
+const mock = true
+if (mock) {
+  require('./mock/api')
+}
 
-//baseURL根据跨域的不同方式设置来设置，这里是代理跨域的设置
-axios.defaults.baseURL = env.baseURL;
+/* baseURL根据跨域的不同方式设置来设置，这里是代理跨域的设置 */
+axios.defaults.baseURL = '/api';
+/* 如果是CORS跨域和jsonp跨域，可以根据不同的环境变量获取不同的地址*/
+// axios.defaults.baseURL = env.baseURL;
+/* 请求超时设置 */
 axios.defaults.timeout = '8000';
+
 //接口返回错误拦截
 axios.interceptors.response.use(function (response) {
   let res = response.data;
@@ -19,6 +27,7 @@ axios.interceptors.response.use(function (response) {
     alert(res.msg)
   }
 })
+
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
