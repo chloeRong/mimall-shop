@@ -14,6 +14,11 @@ export default {
 			console.log(res)
 		})
 
+		/* 在easy-mock上搭建一个后台服务接口 */
+		this.axios.get('/mock/user/login').then((res) => {
+			console.log(res)
+		})
+
 		/* 集成mockjs插件搭建API */
 		// this.axios.get('/user/login').then((res) => {
 		// 	console.log(res.username)
