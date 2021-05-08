@@ -2,9 +2,9 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://www.imooc.com',
+        target: 'http://mall-pre.springboot.cn',
         changeOrigin: true,
-        secure: false,
+        // secure: true,
         pathRewrite: { '/api': '' }
       }
     }

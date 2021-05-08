@@ -8,27 +8,10 @@
 export default {
 	name: 'App',
 	components: {},
-	mounted() {
-		/* 本地json数据请求 */
-		this.axios.get('/mock/user/login.json').then((res) => {
-			console.log(res)
-		})
-
-		/* 集成mockjs插件搭建API */
-		// this.axios.get('/user/login').then((res) => {
-		// 	console.log(res.username)
-		// })
-	}
+	mounted() {}
 }
 </script>
 
-<style>
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px;
-}
+<style lang="scss">
+@import './assets/scss/reset.scss';
 </style>

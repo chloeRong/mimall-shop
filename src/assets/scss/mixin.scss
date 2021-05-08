@@ -1,0 +1,20 @@
+/* 
+复用flex
+ */
+@mixin flex($hov: space-between, $col: center) {
+	display: flex;
+	justify-content: $hov;
+	align-items: $col;
+}
+
+/* 
+复用背景图片
+ */
+
+@mixin bgImg($wh: 0, $hg: 0, $img: '', $size: contain) {
+	display: inline-block;
+	width: $wh;
+	height: $hg;
+	background: url($img) no-repeat center center;
+	background-size: $size;
+}

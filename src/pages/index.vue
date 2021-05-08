@@ -1,14 +1,19 @@
 <template>
-	<div>index page</div>
+	<div>
+		<service-bar></service-bar>
+	</div>
 </template>
 
 <script>
+import serviceBar from '../components/ServiceBar'
 export default {
 	name: 'index',
 	data() {
 		return {}
 	},
-	components: {},
+	components: {
+		serviceBar
+	},
 	methods: {}
 }
 </script>
