@@ -22,14 +22,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../assets/scss/mixin';
 .service {
 	margin: 33px 0;
 	color: #666;
 	font-size: 16px;
 	.container {
-		width: 1226px;
-		margin: 0 auto;
 		ul {
 			@include flex();
 		}

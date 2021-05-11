@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueLazyload from 'vue-lazyload'
 import App from './App.vue'
 import router from './router'
+
 // import env from './env'
 const mock = false
 if (mock) {
@@ -30,6 +32,9 @@ axios.interceptors.response.use(function (response) {
 
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
+Vue.use(VueLazyload, {
+  loading: '/imgs/loading-svg/loading-balls.svg'
+})
 
 new Vue({
   router,

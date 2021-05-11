@@ -165,10 +165,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../assets/scss/base';
-@import '../assets//scss/mixin';
-@import '../assets//scss/config';
-
 .header {
 	.nav-topbar {
 		height: 39px;
@@ -176,7 +172,6 @@ export default {
 		background: $colorB;
 		color: #b0b0b0;
 		.container {
-			margin-right: auto;
 			@include flex();
 			a {
 				display: inline-block;
@@ -234,6 +229,7 @@ export default {
 					font-weight: bold;
 					font-size: 16px;
 					margin-right: 20px;
+					line-height: 100px;
 					span {
 						cursor: pointer;
 					}
@@ -250,6 +246,7 @@ export default {
 						position: absolute;
 						top: 112px;
 						left: 0;
+						z-index: 12;
 						height: 0;
 						opacity: 0;
 						overflow: hidden;
