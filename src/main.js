@@ -7,6 +7,7 @@ import env from './env'
 
 //baseURL根据跨域的不同方式设置来设置，这里是代理跨域的设置
 axios.defaults.baseURL = env.baseURL;
+axios.defaults.baseURL = env.baseURL
 axios.defaults.timeout = '8000';
 //接口返回错误拦截
 axios.interceptors.response.use(function (response) {
