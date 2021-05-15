@@ -2,6 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueLazyload from 'vue-lazyload'
+import VueCookie from 'vue-cookie'
 import App from './App.vue'
 import router from './router'
 
@@ -24,17 +25,25 @@ axios.interceptors.response.use(function (response) {
   if (res.status == 0) {
     return res.data;
   } else if (res.status == 10) {
-    window.location.href = '/#/login'
+    /* 首页是否登录没有关系 */
+    if (location.hash !== '#/index') {
+      window.location.href = '/#/login'
+
+    }
   } else {
     alert(res.msg)
+    // return Promise.reject(res)
   }
 })
 
 Vue.use(VueAxios, axios)
-Vue.config.productionTip = false
 Vue.use(VueLazyload, {
   loading: '/imgs/loading-svg/loading-balls.svg'
 })
+Vue.use(VueCookie)
+
+Vue.config.productionTip = false
+
 
 new Vue({
   router,
