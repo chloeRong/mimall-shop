@@ -65,6 +65,11 @@ export default new Router({
           component: () => import('./pages/alipay.vue')
         }
       ]
+    },
+    {
+      path: '/example',
+      name: 'example',
+      component: () => import('./pages/example/example.vue')
     }
   ]
 });

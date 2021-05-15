@@ -14,7 +14,6 @@
 			<a>微信支付专项课程</a>
 			<span>|</span>
 			<a>配套课程：Java通用型支付+电商平台双系统实战</a>
-			<span>|</span>
 		</div>
 		<div class="footer-copyright">
 			Copyright ©2020 <span class="domain">mi.futurefe.com</span> All Rights

@@ -141,6 +141,7 @@ export default {
 	created() {},
 	mounted() {
 		this.getProducts()
+		this.func()
 	},
 	methods: {
 		login() {

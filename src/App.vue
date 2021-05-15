@@ -8,7 +8,18 @@
 export default {
 	name: 'App',
 	components: {},
-	mounted() {}
+	mounted() {
+		this.getUser()
+		this.getCartNum()
+	},
+	methods: {
+		getUser() {
+			this.axios.get('/user').then(() => {})
+		},
+		getCartNum() {
+			this.axios.get('/carts/products/sum').then(() => {})
+		}
+	}
 }
 </script>
 
