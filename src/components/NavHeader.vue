@@ -3,17 +3,17 @@
 		<div class="nav-topbar">
 			<div class="container">
 				<div class="topbar-menu">
-					<a href="javascirpt:;">小米商城</a>
-					<a href="javascirpt:;">MUI</a>
-					<a href="javascirpt:;">云服务</a>
-					<a href="javascirpt:;">用户协议</a>
+					<a href="javascirpt:void(0);">小米商城</a>
+					<a href="javascirpt:void(0);">MUI</a>
+					<a href="javascirpt:void(0);">云服务</a>
+					<a href="javascirpt:void(0);">用户协议</a>
 				</div>
 				<div class="topbar-user">
-					<a href="javascirpt:;" v-if="!username" @click="login">登录</a>
-					<a href="javascirpt:;" v-if="username">{{ username }}</a>
-					<a href="javascirpt:;" v-if="username">我的订单</a>
-					<a href="javascirpt:;" class="my-cart" @click="goToCart"
-						><span></span>购物车</a
+					<a href="javascirpt:void(0);" v-if="!username" @click="login">登录</a>
+					<a href="javascirpt:void(0);" v-if="username">{{ username }}</a>
+					<a href="javascirpt:void(0);" v-if="username">我的订单</a>
+					<a href="javascirpt:void(0);" class="my-cart" @click="goToCart"
+						><span></span>购物车&nbsp;{{ cartCount }}</a
 					>
 				</div>
 			</div>
@@ -122,11 +122,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
 	name: 'nav-header',
 	data() {
 		return {
-			username: 'Zoe',
 			phoneList: []
 		}
 	},
@@ -136,12 +137,20 @@ export default {
 			return '¥' + val.toFixed(2) + '元'
 		}
 	},
-	computed: {},
+	computed: {
+		// username() {
+		// 	return this.$store.state.username
+		// },
+		// cartCount() {
+		// 	return this.$store.state.cartCount
+		// },
+
+		...mapState(['username', 'cartCount'])
+	},
 	components: {},
 	created() {},
 	mounted() {
 		this.getProducts()
-		this.func()
 	},
 	methods: {
 		login() {

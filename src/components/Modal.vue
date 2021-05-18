@@ -96,7 +96,7 @@ export default {
 		position: absolute;
 		left: 50%;
 		top: 40%;
-		z-index: 16;
+		z-index: 20;
 		background-color: $colorG;
 		transform: translate(-50%, -50%);
 

@@ -70,6 +70,11 @@ export default new Router({
       path: '/example',
       name: 'example',
       component: () => import('./pages/example/example.vue')
+    },
+    {
+      path: '/vuex',
+      name: 'vuex',
+      component: () => import('./pages/example/vuexAdd.vue')
     }
   ]
 });

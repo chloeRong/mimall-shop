@@ -5,7 +5,7 @@
 				<div class="nav-menu">
 					<ul class="menu-wrap">
 						<li class="menu-item">
-							<a href="javascirpt:;">手机 电话卡</a>
+							<a href="javascirpt:void(0);">手机 电话卡</a>
 							<div class="chlidren">
 								<ul v-for="(item, i) in menuList" :key="i">
 									<li v-for="(sub, j) in item" :key="j">
@@ -20,31 +20,31 @@
 							</div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">电视 盒子</a>
+							<a href="javascirpt:void(0);">电视 盒子</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">笔记本 平板</a>
+							<a href="javascirpt:void(0);">笔记本 平板</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">家电 插线板</a>
+							<a href="javascirpt:void(0);">家电 插线板</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">出行 穿戴</a>
+							<a href="javascirpt:void(0);">出行 穿戴</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">智能 路由器</a>
+							<a href="javascirpt:void(0);">智能 路由器</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">电源 配件</a>
+							<a href="javascirpt:void(0);">电源 配件</a>
 							<div class="children"></div>
 						</li>
 						<li class="menu-item">
-							<a href="javascirpt:;">生活 箱包</a>
+							<a href="javascirpt:void(0);">生活 箱包</a>
 							<div class="children"></div>
 						</li>
 					</ul>
@@ -52,7 +52,7 @@
 				<div class="swiper">
 					<swiper :options="swiperOptions">
 						<swiper-slide v-for="(item, index) in swiperList" :key="index">
-							<a :href="'/#/product/' + item.id" target="_blank">
+							<a :href="'/#/product/' + item.id">
 								<img :src="item.imgSrc" />
 							</a>
 						</swiper-slide>
@@ -323,7 +323,6 @@ export default {
 						position: absolute;
 						left: 264px;
 						top: 0;
-						z-index: 10;
 						width: 962px;
 						height: 450px;
 						background-color: #fff;
@@ -350,6 +349,11 @@ export default {
 						}
 					}
 				}
+			}
+		}
+		.swiper {
+			a {
+				display: block;
 			}
 		}
 	}

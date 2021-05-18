@@ -5,6 +5,8 @@ import VueLazyload from 'vue-lazyload'
 import VueCookie from 'vue-cookie'
 import App from './App.vue'
 import router from './router'
+import store from './store/index'
+// import store from './store/main'
 
 // import env from './env'
 const mock = false
@@ -27,12 +29,13 @@ axios.interceptors.response.use(function (response) {
   } else if (res.status == 10) {
     /* 首页是否登录没有关系 */
     if (location.hash !== '#/index') {
+      // eslint-disable-next-line no-debugger
       window.location.href = '/#/login'
-
     }
+    // return Promise.reject(res);
   } else {
-    alert(res.msg)
-    // return Promise.reject(res)
+    // alert(res.msg)
+    return Promise.reject(res)
   }
 })
 
@@ -47,5 +50,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

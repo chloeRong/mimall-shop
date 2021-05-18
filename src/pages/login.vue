@@ -67,6 +67,7 @@ export default {
 				.post('/user/login', { username, password })
 				.then((res) => {
 					this.$cookie.set('userId', res.id, { expires: '1M' })
+					this.$store.dispatch('saveUsername', res.username)
 					this.$router.push('/index')
 				})
 				.catch((res) => {
